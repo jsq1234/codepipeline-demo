@@ -51,9 +51,6 @@ public class User implements UserDetails {
     @NotBlank(message = "Role is required")
     private String role;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    private List<Issue> issues;
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         var roleMapper = new SimpleAuthorityMapper();
