@@ -5,7 +5,6 @@ phases:
     commands:
       - echo "Running build"
       - ./gradlew assemble
-
 artifacts:
   files:
     - build/libs/*.jar
