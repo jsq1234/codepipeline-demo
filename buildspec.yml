@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versios:
+    java: corretto17
+  
+  build:
+    commands:
+      - echo "Running build"
+      - ./gradlew build
+
+artifacts:
+  files:
+    - build/libs/*.jar
+  discard-paths: yes
