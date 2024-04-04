@@ -33,10 +33,4 @@ public class UserService {
 
         return user;
     }
-
-    public List<Issue> getUserIssues(Long id) {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new UsernameNotFoundException("User doesn't exists."));
-        return user.getIssues();
-    }
 }
